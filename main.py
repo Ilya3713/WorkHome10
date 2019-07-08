@@ -15,7 +15,7 @@ def Get_xml():
   for xmli in xml_items:
       for i in xmli.text.split(' '):
         if len(i) >= 6:
-          lists_data.append(i)
+          lists_data.append(i.upper())
           
   counter = Counter(lists_data)
 
@@ -43,7 +43,7 @@ def Get_json():
   for items in data['rss']['channel']['items']:
     for i in items['description'].split(' '):
       if len(i) >= 6:
-        lists_data.append(i)
+        lists_data.append(i.upper())
         
 
   counter = Counter(lists_data)
